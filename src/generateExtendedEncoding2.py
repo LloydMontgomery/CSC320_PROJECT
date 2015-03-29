@@ -2,9 +2,9 @@
 import helperLibrary
 
 def buildClauses():
-    file = open('minimalEncoding.txt', 'w+')
-    file.write('c The minimal encoding\n')
-    file.write('p cnf 729 8829\n')
+    file = open('extendedEncoding2.txt', 'w+')
+    file.write('c The extended encoding part 2\n')
+    file.write('p cnf 729 11826\n')
  
     # At least one number in each entry:
     for y in range(1, 10):
@@ -44,6 +44,21 @@ def buildClauses():
                         for k in range((x+1), 4):
                             for l in range(1, 4):
                                 file.write("-" + str(helperLibrary.xyzToBase9((3*i+x), (3*j+y), z)) + " -" + str(helperLibrary.xyzToBase9((3*i+k),(3*j+l), z)) + " 0\n")    
+    
+    # Each number appears at most once in each entry:
+    for x in range(1, 10):
+        for y in range(1, 10):
+            for z in range(1, 10):
+                for i in range ((z+1), 10):
+                    file.write("-" + str(helperLibrary.xyzToBase9(x, y, z)) + " -" + str(helperLibrary.xyzToBase9(x, y, i)) + " 0\n")    
+
+    # Each number appears at least once in each row:
+    for y in range(1, 10):
+        for z in range(1, 10):
+            for x in range(1, 10):
+                file.write(str(helperLibrary.xyzToBase9(x, y, z)) + " ")    
+            file.write("0\n")
+
     file.close()
 
 buildClauses()   
