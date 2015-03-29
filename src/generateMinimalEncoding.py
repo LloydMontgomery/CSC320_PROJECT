@@ -4,7 +4,7 @@ import helperLibrary
 def buildClauses():
     file = open('minimalEncoding.txt', 'w+')
     file.write('c The minimal encoding\n')
-    file.write('p cnf 730 8829\n')
+    file.write('p cnf 729 8829\n')
  
     # At least one number in each entry:
     for y in range(1, 10):
