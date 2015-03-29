@@ -9,9 +9,10 @@ def initFileHandles():
 
     if len(sys.argv) == 1:
         print "Missing a command-line argument: filename of MiniSAT output"
-        return
+        return 0
     
     miniSATOutputFile = open(sys.argv[1], "r")
+    return 1
     
 def closeFileHandles():
     global miniSATOutputFile
@@ -24,26 +25,25 @@ def checkSatisfiability():
     
     solvable = miniSATOutputFile.readline()
     print solvable
-    if(solvable == "UNSAT\n"):
-        print "CNF was unsatisfiable"
-        return
-    
+
     if(solvable == "SAT\n"):
         formatter()
+    else:
+        print "CNF was unsatisfiable"
 
 def formatter(): 
     global miniSATOutputFile
     
-    #sudoku = [[None]*9]*9
-    sudoku = [[None],[None],[None],[None],[None],[None],[None],[None],None],
-             [[None],[None],[None],[None],[None],[None],[None],[None],[None]],
-             [[None],[None],[None],[None],[None],[None],[None],[None],[None]],
-             [[None],[None],[None],[None],[None],[None],[None],[None],[None]],
-             [[None],[None],[None],[None],[None],[None],[None],[None],[None]],
-             [[None],[None],[None],[None],[None],[None],[None],[None],[None]],
-             [[None],[None],[None],[None],[None],[None],[None],[None],[None]],
-             [[None],[None],[None],[None],[None],[None],[None],[None],[None]],
-             [[None],[None],[None],[None],[None],[None],[None],[None],[None]],
+    #sudoku = [[]*9]*9
+    sudoku = [[0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0],
+             [0,0,0,0,0,0,0,0,0]]
     CFN = miniSATOutputFile.readline()
 
     for s in CFN.split():
@@ -57,7 +57,8 @@ def formatter():
 
   
 def main():
-    initFileHandles()
+    if not initFileHandles():
+        return
     checkSatisfiability()
     closeFileHandles()
 
