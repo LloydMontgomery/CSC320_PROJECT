@@ -87,9 +87,7 @@ def addSudokuToMinimalEncodingFile():
 def main():
 	initFileHandles()
 	convertSudoku()
-
 	addSudokuToMinimalEncodingFile()
-
 	closeFileHandles()
 	
 main()
