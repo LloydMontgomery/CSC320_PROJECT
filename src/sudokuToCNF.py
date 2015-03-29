@@ -6,7 +6,7 @@ sudokuFile = 0
 minimalEncodingFile = 0
 sudokuMinEncodingFile = 0
 sudokuNumbers = []
-#sodukuLookupTable = [0]*729
+#sodukuLookupTable = [[None]*9]*9
 
 def initFileHandles():
 	global sudokuFile, minimalEncodingFile, sudokuMinEncodingFile
@@ -55,15 +55,33 @@ def convertSudoku():
 	# 		y += 1
 
 def addSudokuToMinimalEncodingFile():
-	global sudoku, minimalEncodingFile, sudokuMinEncodingFile
+	global sudokuNumbers, minimalEncodingFile, sudokuMinEncodingFile
 
+	# Read the first two lines, skip the first
 	minimalEncodingBuffer = minimalEncodingFile.readline()
+	sudokuMinEncodingFile.write(minimalEncodingBuffer)
 	minimalEncodingBuffer = minimalEncodingFile.readline()
 
-	minimalEncodingBuffer = minimalEncodingBuffer[:]
+	# Split the input into 4 pieces so we can add to the number of clauses
+	minimalEncodingBuffer = minimalEncodingBuffer.split()
+	clauses = int(minimalEncodingBuffer[3])
+	clauses += len(sudokuNumbers)
 	
-	print minimalEncodingBuffer
-	#while 
+	# Cast the number of clauses back into a str and write to file
+	minimalEncodingBuffer[3] = str(clauses)
+	minimalEncodingBuffer = " ".join(minimalEncodingBuffer)
+	sudokuMinEncodingFile.write(minimalEncodingBuffer + "\n")
+
+	# Copy all the existing clauses as is
+	while True:
+		minimalEncodingBuffer = minimalEncodingFile.readline()
+		if minimalEncodingBuffer == "":
+			break
+		sudokuMinEncodingFile.write(minimalEncodingBuffer)
+
+	# Write the sudoku truth clauses as clauses in the minimal encoding
+	for number in sudokuNumbers:
+		sudokuMinEncodingFile.write(str(number) + " 0\n")
 
 
 def main():
