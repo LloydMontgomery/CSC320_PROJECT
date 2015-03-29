@@ -1,14 +1,16 @@
 #!/usr/bin/python
+import sys
+import helperLibrary
 
 def initFileHandles():
-	fo = open("foo1.txt", "w+")
+	sudoku = open("foo1.txt", "w+")
 	print (fo.name)
 	fo.close()
 
 def convertSudoku():
 	pass
 
-def main()
+def main():
 	initFileHandles()
-
+	
 main()
