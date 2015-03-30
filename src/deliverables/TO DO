@@ -1,0 +1,10 @@
+This folder "deliverables" is for complete and functional code only. If you
+test code in this folder, delete all by-products before leaving. We are
+handing in this folder as our submision, so don't clutter it.
+
+ALLOWED CONTENTS (Edit as you feel necessary)
+- helperLibrary.py
+- generateMinimalEncoding.py
+	- minimalEncoding.txt
+
+ 

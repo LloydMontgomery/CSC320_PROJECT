@@ -1,10 +1,15 @@
+# Authors: Lloyd, Chris, Parker
+# March 29th, 2015
+# 
+# Generates a minimal encoding in CNF and outputs to a file called: "minimalEncoding.txt"
+
 #!/usr/bin/python
 import helperLibrary
 
 def buildClauses():
-    file = open('minimalEncoding.txt', 'w+')
-    file.write('c The minimal encoding\n')
-    file.write('p cnf 729 8829\n')
+    file = open("minimalEncoding.txt", "w+")
+    file.write("c The minimal encoding\n")
+    file.write("p cnf 729 8829\n")
  
     # At least one number in each entry:
     for y in range(1, 10):

@@ -1,3 +1,8 @@
+# Authors: Lloyd, Chris, Parker
+# March 29th, 2015
+# 
+# Contains functions that are used by other Python scripts in this folder
+
 # def xyzToBase9(x, y, z):
 #
 # Parameters: x - Column
