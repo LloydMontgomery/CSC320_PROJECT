@@ -23,13 +23,13 @@ def closeFileHandles():
 def checkSatisfiability():
     global miniSATOutputFile
     
-    solvable = miniSATOutputFile.readline()
-    print solvable
+    # solvable = miniSATOutputFile.readline()
+    # print solvable
 
-    if(solvable == "SAT\n"):
-        formatter()
-    else:
-        print "CNF was unsatisfiable"
+    # if(solvable == "SAT\n"):
+    #     formatter()
+    # else:
+    #     print "CNF was unsatisfiable"
 
 def formatter(): 
     global miniSATOutputFile
@@ -59,7 +59,8 @@ def formatter():
 def main():
     if not initFileHandles():
         return
-    checkSatisfiability()
+    # checkSatisfiability()
+    formatter()
     closeFileHandles()
 
 main()
