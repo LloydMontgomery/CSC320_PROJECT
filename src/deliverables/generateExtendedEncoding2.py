@@ -1,3 +1,8 @@
+# Authors: Lloyd, Chris, Parker
+# March 29th, 2015
+# 
+# Generates a further extended encoding in CNF and outputs to a file called: "extendedEncoding2.txt"
+
 #!/usr/bin/python
 import helperLibrary
 
