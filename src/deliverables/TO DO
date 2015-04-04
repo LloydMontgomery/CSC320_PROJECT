@@ -6,5 +6,7 @@ ALLOWED CONTENTS (Edit as you feel necessary)
 - helperLibrary.py
 - generateMinimalEncoding.py
 	- minimalEncoding.txt
+- generateExtendedEncoding.py
+	- extendedEncoding.txt
 
  
