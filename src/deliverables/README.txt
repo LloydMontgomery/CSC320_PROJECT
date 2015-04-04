@@ -7,7 +7,8 @@ Parker Atkins	 - V00
 -------------------------------------------------------------------------------
 
 Global Pre-Conditions:
-	- Python 2.7
+	- Python 2.7 installed
+	- minisat installed
 
 -------------------------------------------------------------------------------
 Base Assignment Files - Minimal Encoding using miniSAT - 12/15
@@ -16,7 +17,8 @@ How to execute all files for 12/15 marks:
 
 > python generateMinimalEncoding.py
 > python sudokuToCNF.py testsudoku.txt minimalEncoding.txt
-> python outputFormatter.py <*****************************>
+> minisat testsudoku_minimalEncoding.txt testDud-minEnc-minisat.txt
+> python outputFormatter.py <testDud-minEnc-minisat.txt>
 
 -------------------------------------------------------------------------------
 File: generateMinimalEncoding.py
@@ -26,6 +28,7 @@ To execute:
 
 Ouput:
 minimalEncoding.txt
+
 -------------------------------------------------------------------------------
 File: sudokuToCNF.py
 
@@ -45,6 +48,7 @@ To Execute (with files given):
 
 Ouput:
 <sudoku file name>_<encoding file name>.txt
+
 -------------------------------------------------------------------------------
 File: outputFormatter.py
 
@@ -83,6 +87,10 @@ EX:
 
 
 EVERYTHING BELOW HERE IS NOT COMPLETE, PIECES OF THE FINAL README
+
+- ADD STUFF FOR NORVIG (inc. times, etc.)
+- ADD STUFF FOR SATZ (inc. times, sizes, etc.)
+- ADD STUFF FOR EXTENDED & EXTENDED2 ENCODING
 
 -------------------------------------------------------------------------------
 File: generateExtendedEncoding.py
