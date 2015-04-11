@@ -2,7 +2,7 @@ CSC 320 Project
 By: 
 Lloyd Montgomery - V00738451
 Chris Cook 		 - V00182284
-Parker Atkins	 - V00
+Parker Atkins	 - V00706326
 
 -------------------------------------------------------------------------------
 
@@ -13,12 +13,13 @@ Global Pre-Conditions:
 -------------------------------------------------------------------------------
 Base Assignment Files - Minimal Encoding using miniSAT - 12/15
 -------------------------------------------------------------------------------
+
 How to execute all files for 12/15 marks:
 
 > python generateMinimalEncoding.py
 > python sudokuToCNF.py testsudoku.txt minimalEncoding.txt
-> minisat testsudoku_minimalEncoding.txt testDud-minEnc-minisat.txt
-> python outputFormatter.py <testDud-minEnc-minisat.txt>
+> minisat testsudoku_minimalEncoding.txt testSud-minEnc-minisat.txt
+> python outputFormatter.py testSud-minEnc-minisat.txt
 
 -------------------------------------------------------------------------------
 File: generateMinimalEncoding.py
@@ -76,44 +77,38 @@ EX:
  2 8 9 | 6 4 3 | 5 7 1
  5 7 3 | 2 9 1 | 6 8 4
  1 6 4 | 8 7 5 | 2 9 3
-
-
-
-
-
-
-
-
-
-
-EVERYTHING BELOW HERE IS NOT COMPLETE, PIECES OF THE FINAL README
-
-- ADD STUFF FOR NORVIG (inc. times, etc.)
-- ADD STUFF FOR SATZ (inc. times, sizes, etc.)
-- ADD STUFF FOR EXTENDED & EXTENDED2 ENCODING
-
+ 
 -------------------------------------------------------------------------------
+Additional Assignment Files - Extended Encodings - 14/15
+-------------------------------------------------------------------------------
+
 File: generateExtendedEncoding.py
 
 To execute:
-python generateExtendedEncoding.py
+> python generateExtendedEncoding.py
 
 Ouput:
 extendedEncoding.txt
+
 -------------------------------------------------------------------------------
 File: generateExtendedEncoding2.py
 
 To execute:
-python generateExtendedEncoding2.py
+> python generateExtendedEncoding2.py
 
 Ouput:
 extendedEncoding2.txt
--------------------------------------------------------------------------------
-File: generateExtendedEncoding2.py
 
-To execute:
-python generateExtendedEncoding2.py
-
-Ouput:
-extendedEncoding2.txt
 -------------------------------------------------------------------------------
+Additional Assignment Files - Additional SAT Solver - 15/15
+-------------------------------------------------------------------------------
+
+We used Satz.c as an additional SAT solver. Look at report.txt for breakdown.
+
+
+
+
+
+
+
+

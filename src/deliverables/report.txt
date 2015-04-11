@@ -1,0 +1,90 @@
+CSC 320 Project
+By: 
+Lloyd Montgomery - V00738451
+Chris Cook 		 - V00182284
+Parker Atkins	 - V00706326
+
+-------------------------------------------------------------------------------
+
+Running MiniSAT on the three different encodings:
+
+Puzzle 1
+
+Minimal Encoding (8,829):	
+	- 0.006801
+	- 0.009796
+	- 0.012194
+	- 0.010871
+	- 0.015635
+	Average = 0.0110594
+
+Extended Encoding (11,745): 
+	- 0.009842
+	- 0.017267
+	- 0.019182
+	- 0.015668
+	- 0.012346
+	Average = 0.014867
+
+Extended Encoding 2 (11,826):
+	- 0.020061
+	- 0.009773
+	- 0.019064
+	- 0.015049
+	- 0.011797
+	Average = 0.0151488
+
+Norvig:
+	- 0.009292
+	- 0.009726
+	- 0.009450
+	- 0.009303
+	- 0.009408
+	Average = 0.0094358
+
+
+Puzzle 2
+
+Minimal Encoding (8,829):
+	- 0.010231
+	- 0.011273
+	- 0.007978
+	- 0.006237
+	- 0.009835
+	Average = 0.0091108
+
+Extended Encoding (11,745):
+	- 0.017541
+	- 0.013069
+	- 0.011473
+	- 0.016604
+	- 0.013605
+	Average = 0.0144584
+
+Extended Encoding 2 (11,826):
+	- 0.012345
+	- 0.013775
+	- 0.010104
+	- 0.016686
+	- 0.015956
+	Average = 0.0137732
+
+Norvig:
+	- 0.006383
+	- 0.006087
+	- 0.006223
+	- 0.006086
+	- 0.006197
+	Average: 0.0061952
+	
+We expected the extended encodings to run much faster but due to the low
+number of clauses and the parse time to read those clauses being higher for
+the extended encodings, we believe this skewed our CPU timings. For larger
+nxn sudoku puzzles, we expect that the extended encodings will provide
+a faster solution.
+
+
+
+
+
+
