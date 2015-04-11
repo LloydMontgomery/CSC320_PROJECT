@@ -1,7 +1,7 @@
 CSC 320 Project
 By: 
 Lloyd Montgomery - V00738451
-Chris Cook 		 - V00182284
+Chris Cook 	 - V00182284
 Parker Atkins	 - V00706326
 
 -------------------------------------------------------------------------------
