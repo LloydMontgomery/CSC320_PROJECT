@@ -164,7 +164,7 @@ def solve_all(grids, name='', showif=0.00):
         if showif is not None and t > showif:
             display(grid_values(grid))
             if values: display(values)
-            print '(%.2f seconds)\n' % t
+            print '(%.6f seconds)\n' % t
         return (t, solved(values))
     times, results = zip(*[time_solve(grid) for grid in grids])
     N = len(grids)
